@@ -9,7 +9,7 @@ package dip.lab2;
  * @author your name goes here
  */
 public class BaggageServiceTipCalculator implements TipCalculator{
-
+    
     private double baseTipPerBag;
     private int bagCount;
 
