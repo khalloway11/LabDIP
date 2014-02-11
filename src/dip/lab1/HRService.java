@@ -49,7 +49,7 @@ public class HRService {
             annualCompensation = e.getAnnualWages();
 
         } else if(employeeType.equals(SALARIED_TYPE)) {
-            annualCompensation = e.getAnnualSalary();
+            annualCompensation = e.getAnnualWages();
 
         } else {
             JOptionPane.showMessageDialog(
@@ -77,7 +77,7 @@ public class HRService {
             annualCompensation = e.getAnnualWages();
 
         } else if(e instanceof SalariedEmployee) {
-            annualCompensation = e.getAnnualSalary();
+            annualCompensation = e.getAnnualWages();
 
         } else {
             JOptionPane.showMessageDialog(
