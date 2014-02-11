@@ -10,6 +10,8 @@ package dip.lab3;
  *
  * @author khalloway
  */
-public interface GUIMessageWriter {
-    
+public class GUIMessageWriter implements MessageWriter{
+    public void writeMessage(MessageReader in){
+        System.out.println(in.getMessage());
+    }
 }

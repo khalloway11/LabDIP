@@ -10,6 +10,9 @@ package dip.lab3;
  *
  * @author khalloway
  */
-public interface GUIMessageReader {
-    
+public class GUIMessageReader implements MessageReader{
+    private String message;
+    public String getMessage(){
+        return message;
+    }
 }
