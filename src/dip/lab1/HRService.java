@@ -9,6 +9,11 @@ import javax.swing.JOptionPane;
  * @author your name goes here
  */
 public class HRService {
+    private Employee employee;
+    
+    public HRService(Employee e){
+        this.employee = e;
+    }
     /** 
      * Constants can be used for retrieving annual wages of
      * various employee types. Is this the best way to go? Do we have
@@ -38,9 +43,9 @@ public class HRService {
      * Are there other options? Hint: enum
      * @return the annual compensation for supported employee types
      */
-    public double getAnnualCompensationForEmployee(Employee e)
+    public double getAnnualCompensationForEmployee()
     {
-        return e.getAnnualWages();
+        return employee.getAnnualWages();
     }
 
 
