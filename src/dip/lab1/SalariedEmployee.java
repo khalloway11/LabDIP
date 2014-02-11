@@ -8,22 +8,47 @@ package dip.lab1;
  */
 public class SalariedEmployee extends Employee {
     private double annualSalary;
-    /** default constructor. Is this the best way to go? */
-    public SalariedEmployee() {}
-
+    private double annualBonus;
+    
     /**
      * Convenience constructor. Is this the best way to go?
      * @param annualSalary - the employee's annual salary
      * @param annualBonus - a bonus benefit, if any
      */
     public SalariedEmployee(double annualSalary, double annualBonus) {
-        this.annualSalary = annualSalary;
+        setAnnualSalary(annualSalary);
         setAnnualBonus(annualBonus);
     }
     
+    public double getAnnualBonus() {
+        return annualBonus;
+    }
+
+    public void setAnnualBonus(double annualBonus) {
+        if(annualBonus < 0){
+            throw new IllegalArgumentException();
+        } else {
+            this.annualBonus = annualBonus;
+        }
+    }
+
+    public double getAnnualSalary() {
+        return annualSalary;
+    }
+
+    public void setAnnualSalary(double annualSalary) {
+        if(annualSalary < 0){
+            throw new IllegalArgumentException();
+        } else {
+            this.annualSalary = annualSalary;
+        }
+    }
+    
+
+    
     @Override
     public double getAnnualWages(){
-        return annualSalary + getAnnualBonus();
+        return annualSalary + annualBonus;
     }
 
     

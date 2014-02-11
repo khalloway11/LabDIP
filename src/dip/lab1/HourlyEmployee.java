@@ -18,8 +18,8 @@ public class HourlyEmployee extends Employee {
      * @param totalHrsForYear - total hours worked or predicted per year
      */
     public HourlyEmployee(double hourlyRate, double totalHrsForYear) {
-        this.hourlyRate = hourlyRate;
-        this.totalHrsForYear = totalHrsForYear;
+        setHourlyRate(hourlyRate);
+        setTotalHrsForYear(totalHrsForYear);
     }
 
     public double getHourlyRate() {
@@ -27,6 +27,9 @@ public class HourlyEmployee extends Employee {
     }
 
     public void setHourlyRate(double hourlyRate) {
+        if(hourlyRate < 0 || hourlyRate > 500) {
+            throw new IllegalArgumentException();
+        }
         this.hourlyRate = hourlyRate;
     }
 
@@ -35,6 +38,9 @@ public class HourlyEmployee extends Employee {
     }
 
     public void setTotalHrsForYear(double totalHrsForYear) {
+        if(totalHrsForYear < 0 || totalHrsForYear > 5000) {
+            throw new IllegalArgumentException();
+        }
         this.totalHrsForYear = totalHrsForYear;
     }
     
