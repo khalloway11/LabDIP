@@ -5,6 +5,7 @@
  */
 
 package dip.lab3;
+import java.util.Scanner;
 
 /**
  *
@@ -14,6 +15,8 @@ public class ConsoleMessageReader implements MessageReader{
     public String message;
     
     public String getMessage(){
+        Scanner scan = new Scanner(System.in);
+        message = scan.nextLine();
         return message;
     }
     
